@@ -3,17 +3,14 @@
 
 #define RST_PIN   9    
 #define SS_PIN    10 
-#define KEY_RETURN 0xB0 //enter key
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);
-char Enter = KEY_RETURN;
 
 void setup() {
   // put your setup code here, to run once:
    Serial.begin(9600);
    SPI.begin();
    mfrc522.PCD_Init();
-
 }
 
 void loop() {
@@ -26,7 +23,6 @@ void loop() {
     return;
   }
  
-  //Serial.print("UID tag :");
   String content= "";
   byte letter;
 
@@ -40,21 +36,3 @@ void loop() {
   delay(3000);
   Serial.println();
 }
-  
-//  Serial.println();
-//  Serial.print("Message : ");
-//  content.toUpperCase();
-//  
-//  if (content.substring(1) == "51 54 5F 26") {
-//    Serial.println("Authorised access");
-//    Serial.println();
-//    delay(3000);
-//  }
-// 
-// else {
-//    Serial.println("Who are you?");
-//    Serial.println();
-//    delay(3000);
-//  }
-//
-//}

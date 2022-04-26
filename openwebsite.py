@@ -82,23 +82,23 @@ while unlocked == False:
 while unlocked:
     data = rfid()
 
-    if data == '0B0086059021':
+    if '0B0086059021' in data:
         link = random.choice(lofi)
         webbrowser.open(link)
 
-    if data == '0D21508201B':
+    if '0D21508201B' in data:
         link = random.choice(classical)
         webbrowser.open(link)
 
-    if data == '0C21A0C301B':
+    if '0C21A0C301B' in data:
         link = random.choice(jazz)
         webbrowser.open(link)
 
-    if data == '0E00E309001B':
+    if '0E00E309001B' in data:
         link = random.choice(piano)
         webbrowser.open(link)
 
-    if data == '0F00DC1C01B':
+    if '0F00DC1C01B' in data:
         link = random.choice(soundtrack)
         webbrowser.open(link)
     

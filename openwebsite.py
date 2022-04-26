@@ -68,7 +68,7 @@ def rfid():
 def wake_up():
     #pyautogui.click()
     pyautogui.press('enter')
-    pyautogui.write('hello0724')
+    pyautogui.write('mypassword')
     pyautogui.press('enter')
     #os.system("pmset sleepnow")
 
